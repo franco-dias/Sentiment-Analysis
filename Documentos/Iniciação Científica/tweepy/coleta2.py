@@ -39,9 +39,6 @@ while len(searched_tweets) < max_tweets:
 #print searched_tweets[0]
 
 for tweet in searched_tweets:
-	print tweet
-	print
-	print
-    #csvWriter.writerow([tweet.created_at, tweet.full_text.encode('utf-8')])
+    csvWriter.writerow([tweet._json['full_text'].encode('utf-8')])
 
 csvFile.close()
